@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+
+  <script type="text/javascript">
+
+var numeroVariable = prompt("¿ Cuantos numeros quieres que tenga el array ?");
+var arrayNumeros = new Array;
+var max = 0
+for (var i = 0; i < numeroVariable; i++) {
+var numeros = prompt("Introduce los numeros");
+arrayNumeros.push(numeros);
+
+if (max < arrayNumeros[i]) {
+  max = arrayNumeros[i]
+}
+}
+document.write(max)
+/* document.write(Math.max.apply(Math,arrayNumeros)) */
+  </script>
+  <body>
+
+  </body>
+</html>
