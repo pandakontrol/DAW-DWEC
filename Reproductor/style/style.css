@@ -1,0 +1,74 @@
+body{
+
+
+}
+
+.container{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(3,1fr);
+  grid-template-areas: "menu vacio videos"
+                       "menu reproductor videos"
+                       "menu controles videos";
+  background-color: green;
+}
+
+.reproductor{
+  grid-area: reproductor;
+  background-color: red;
+}
+
+.controles{
+  display:grid;
+  grid-area:controles;
+
+  grid-template-columns: repeat(7,20px);
+  grid-template-rows: 20px;
+  background-color: blue;
+
+  grid-gap: 80px;
+
+}
+
+
+.videos{
+  grid-area: videos;
+  background-color:yellow;
+}
+
+/* Imagenes de los controles */
+
+#silenciar{
+
+  content: url("../images/volume_off-24px.svg")
+}
+
+#rebobinar{
+
+  content: url("../images/replay_10-24px.svg")
+}
+
+#play{
+
+  content: url("../images/play_arrow-24px.svg")
+}
+
+#adelantar{
+
+  content: url("../images/forward_10-24px.svg")
+}
+
+#reiniciar{
+
+  content: url("../images/replay-24px.svg")
+}
+
+#volumenUp{
+
+  content: url("../images/volume_up-24px.svg")
+}
+
+#volumenDown{
+
+  content: url("../images/volume_down-24px.svg")
+}
