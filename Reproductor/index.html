@@ -10,38 +10,49 @@
 
 <body>
 
-
 <div class="container">
-
 
 <div class="reproductor">
 
-  <video controls>
-    <source src="./media/clase.mp4" type="audio/mpeg">
-    </video>
+  <div class="publicidad">
+  <button id="cerrar" onclick="cerrarPubli()"type="button" name="x"></button>
+  <p>Estas viendo porno solo!?</p>
+  <p>Pulsa la X despues de 10 segundos</p>
+  </div>
 
+  <video id="video1" src="./media/clase.mp4" type="audio/mpeg"> </video>
+
+  <div class="progress">
+  <div class="bar">
+
+  </div>
+
+  </div>
 </div>
 
 <div class="controles">
 
-<div id="silenciar"><img src=""> </div>
-<div id="rebobinar"> </div>
-<div id="play"> </div>
-<div id="adelantar"> </div>
-<div id="reiniciar"> </div>
-<div id="volumenUp"> </div>
-<div id="volumenDown"> </div>
+<button id="silenciar" onclick="soundMuted()"></button>
+<button id="rebobinar" onclick="forward()"></button>
+<button id="play" onclick= "playPause()" ></button>
+<button id="adelantar" onclick="skip()"></button>
+<button id="reiniciar" onclick="reboot()"></button>
+<button id="volumenUp" onclick="soundUp()"></button>
+<button id="volumenDown" onclick="soundDown()"></button>
 
 
 </div>
 
 <div class="videos">
 
+<video id="video2" src="./media/vete.mp4" type="audio/mpeg"></video>
+<video id="video3" src="./media/duki.mp4" type="audio/mpeg"></video>
+<video id="video4" src="./media/monkey.mp4" type="audio/mpeg"></video>
+
 </div>
 
-
-
-
 </div>
+
+<script src="./scripts/script.js"></script>
   </body>
   </html>
