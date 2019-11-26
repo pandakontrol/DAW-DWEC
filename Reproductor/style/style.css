@@ -38,7 +38,7 @@ background-color: #34495e;
   grid-template-columns: repeat(7,20px);
   grid-template-rows: 70px;
 
-
+  
   grid-gap: 70px;
   justify-content: center;
   border: 2px solid black;
@@ -117,7 +117,7 @@ p{
 .progress .bar{
   height: 15px;
   width: 0%;
-  background-color: blue;
+  background-color: red;
   border-radius: 5px;
 }
 
@@ -163,6 +163,12 @@ button{
   height: 50px;
   width:50px;
   background-image: url("../images/play_arrow-24px.svg");
+  background-size: contain;
+}
+#pause{
+  height: 50px;
+  width:50px;
+  background-image: url("../images/pause-24px.svg");
   background-size: contain;
 }
 

@@ -1,10 +1,17 @@
+/*                     REPRODUCTOR DE VIDEOS                   */
+
+
 var miVideo;
 let bar;
 
 let currTime ;
 let duration ;
-
 let porcentaje ;
+
+
+
+/*  AL CARGAR LA PAGINA AÑADO EVENTOS A CADA VIDEO  */
+
 window.onload = function() {
 
   miVideo = document.getElementById('video1');
@@ -22,12 +29,14 @@ actualizarBarra();
 
 }
 
+/* FUNCION QUE CAMBIA EL VIDEO DEL CENTRO POR LOS LATERALES */
 
 function cargarVideo() {
 
   var aux = this.src;
   this.src = miVideo.src;
   miVideo.src = aux;
+
   miVideo.currentTime = 0;
   miVideo.play();
   meterPubli();
@@ -40,6 +49,7 @@ function playPause(){
 
   if (miVideo.paused) {
     miVideo.play();
+
     setInterval(intervalo, 10);
   }else {
     miVideo.pause();
@@ -103,17 +113,18 @@ function meterPubli() {
   if (miVideo.currentTime <= 10) {
     document.getElementsByClassName('publicidadCerrada')[0].classList.replace('publicidadCerrada','publicidad');
   }else {
-    console.log('No han pasado 10 segundos aun, sigue esperando!');
+    console.log('No han pasado 10 segundos, sigue esperando!');
   }
 
 }
+
+/* FUNCION DE LA BARRA DE PROGRESO ( CON UNA REGLA DE 3) */
 
 function actualizarBarra() {
 
  currTime = miVideo.currentTime;
  duration = miVideo.duration;
  porcentaje = (currTime * 100) / duration;
-
-  bar.style.width = porcentaje + '%';
+ bar.style.width = porcentaje + '%';
 
 }
